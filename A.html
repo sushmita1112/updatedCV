@@ -1,0 +1,463 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushmita Borade | .NET Full Stack Developer</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family:'Poppins',sans-serif;
+            background:#0f172a;
+            color:#fff;
+        }
+
+        .sidebar{
+            position:fixed;
+            left:0;
+            top:0;
+            width:280px;
+            height:100vh;
+            background:#1e293b;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            padding:30px 20px;
+            z-index:1000;
+        }
+
+        .profile-img{
+            width:160px;
+            height:160px;
+            border-radius:50%;
+            object-fit:cover;
+            border:4px solid #3b82f6;
+            margin-bottom:15px;
+        }
+
+        .name{
+            font-size:24px;
+            font-weight:700;
+            text-align:center;
+        }
+
+        .role{
+            color:#94a3b8;
+            margin-bottom:25px;
+            text-align:center;
+        }
+
+        .nav{
+            width:100%;
+        }
+
+        .nav a{
+            display:block;
+            text-decoration:none;
+            color:#fff;
+            background:#334155;
+            margin:10px 0;
+            padding:12px;
+            border-radius:30px;
+            text-align:center;
+            transition:.3s;
+        }
+
+        .nav a:hover{
+            background:#3b82f6;
+        }
+
+        .main{
+            margin-left:280px;
+        }
+
+        .hero{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            padding:40px;
+            background:linear-gradient(135deg,#2563eb,#7c3aed);
+        }
+
+        .hero h1{
+            font-size:60px;
+        }
+
+        .hero h2{
+            margin:15px 0;
+            font-weight:400;
+        }
+
+        .hero p{
+            max-width:700px;
+            margin:auto;
+            line-height:1.8;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:12px 25px;
+            background:#fff;
+            color:#2563eb;
+            text-decoration:none;
+            border-radius:30px;
+            font-weight:600;
+            margin-right:10px;
+        }
+
+        section{
+            padding:80px 40px;
+        }
+
+        .section-title{
+            text-align:center;
+            margin-bottom:40px;
+            font-size:36px;
+        }
+
+        .section-title span{
+            color:#3b82f6;
+        }
+
+        .about{
+            max-width:1000px;
+            margin:auto;
+            text-align:center;
+            line-height:1.9;
+        }
+
+        .skills{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+            gap:20px;
+        }
+
+        .skill-card{
+            background:#1e293b;
+            padding:25px;
+            border-radius:15px;
+            text-align:center;
+            transition:.3s;
+        }
+
+        .skill-card:hover{
+            transform:translateY(-5px);
+        }
+
+        .timeline{
+            max-width:1000px;
+            margin:auto;
+        }
+
+        .timeline-item{
+            background:#1e293b;
+            padding:25px;
+            border-radius:15px;
+            margin-bottom:20px;
+        }
+
+        .timeline-item h3{
+            color:#3b82f6;
+            margin-bottom:10px;
+        }
+
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:25px;
+        }
+
+        .project-card{
+            background:#1e293b;
+            padding:25px;
+            border-radius:15px;
+        }
+
+        .certifications,
+        .education{
+            max-width:900px;
+            margin:auto;
+        }
+
+        .list-item{
+            background:#1e293b;
+            padding:20px;
+            margin-bottom:15px;
+            border-radius:12px;
+        }
+
+        .contact-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .contact-card{
+            background:#1e293b;
+            padding:25px;
+            border-radius:15px;
+            text-align:center;
+        }
+
+        footer{
+            text-align:center;
+            padding:25px;
+            background:#020617;
+        }
+
+        @media(max-width:768px){
+
+            .sidebar{
+                position:relative;
+                width:100%;
+                height:auto;
+            }
+
+            .main{
+                margin-left:0;
+            }
+
+            .hero h1{
+                font-size:38px;
+            }
+
+            section{
+                padding:60px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <img src="Sushmita.jpeg" alt="Sushmita Borade" class="profile-img">
+
+    <div class="name">Sushmita Borade</div>
+    <div class="role">.NET Full Stack Developer</div>
+
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</div>
+
+<div class="main">
+
+<section class="hero" id="home">
+
+    <div>
+        <h1>Sushmita Borade</h1>
+        <h2>.NET Full Stack Developer</h2>
+
+        <p>
+            Software Engineer with 3+ years of experience developing
+            enterprise applications using ASP.NET Core, C#, Angular,
+            SQL Server, Web API, MVC, Entity Framework, and Crystal Reports.
+        </p>
+
+        <a href="#contact" class="btn">Hire Me</a>
+        <a href="Sushmita_JU.pdf" class="btn">Download Resume</a>
+    </div>
+
+</section>
+
+<section id="about">
+
+    <h2 class="section-title">About <span>Me</span></h2>
+
+    <div class="about">
+       Software Engineer with 3+ years of experience in designing, developing, enhancing, and supporting enterprise applications using C#, ASP.NET, ASP.NET Core, MVC, Angular, Web API, SQL Server, Entity Framework, and Crystal Reports.Experienced in the complete Software Development Life Cycle (SDLC), including requirement analysis, design, development, testing, deployment, and production support. Strong expertise in object-oriented programming (OOP), 
+        database development, RESTful APIs, debugging, and performance optimisation. Skilled in Agile/Scrum methodologies, code reviews, and cross-functional collaboration to deliver scalable, secure, and high-quality software solutions. Proven ability to troubleshoot complex issues, improve application reliability, and contribute to business-critical projects in Logistics, Banking & Financial Services, and Airline Management domains. Holds a Bachelor of Engineering coupled with various certifications in PG-CDAC.
+    </div>
+
+</section>
+
+<section id="skills">
+
+    <h2 class="section-title">Technical <span>Skills</span></h2>
+
+    <div class="skills">
+
+        <div class="skill-card">C#</div>
+        <div class="skill-card">ASP.NET</div>
+        <div class="skill-card">ASP.NET Core</div>
+        <div class="skill-card">MVC</div>
+        <div class="skill-card">Web API</div>
+        <div class="skill-card">Angular</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">SQL Server</div>
+        <div class="skill-card">Entity Framework</div>
+        <div class="skill-card">Azure DevOps</div>
+        <div class="skill-card">Git</div>
+        <div class="skill-card">Crystal Reports</div>
+
+    </div>
+
+</section>
+
+<section id="experience">
+
+    <h2 class="section-title">Work <span>Experience</span></h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>NetConnect Pvt Ltd (TCS Client)</h3>
+            <p>July 2024 – APR 2026</p>
+            <p>.NET Developer | Logistics Domain</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Bytzsoft Technologies Pvt Ltd</h3>
+            <p>Oct 2022 – Nov 2023</p>
+            <p>Software Engineer | Airline Domain</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Ember Technologies Pvt Ltd</h3>
+            <p>Aug 2021 – May 2022</p>
+            <p>Associate Software Engineer | Banking Domain</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+            <h3>Logistics Management System</h3>
+            <p>Having experience with TCS client side in the Logistics domain as a <b> .Net Developer </b>.</p>
+            <p>Developed and maintained enterprise applications using ASP.NET Core, Angular, C#, VB.NET, SQL Server, and Crystal Reports.</p>
+            <p>Designed and implemented RESTful Web APIs for seamless integration between applications.</p>
+            <p>Analysed, diagnosed, and resolved production issues, reducing application downtime and improving system reliability.</p>
+            <p>Collaborated with business analysts, QA teams, and stakeholders to deliver software enhancements.</p>
+            <p>Participated in Agile ceremonies including sprint planning, daily stand-ups, code reviews, and retrospectives.</p>
+            <p>Optimised SQL queries and database operations to improve application performance.</p>
+            <p>Created and maintained technical documentation, deployment guides, and knowledge-base articles.</p>
+            <!-- <p>ASP.NET Core, Angular, SQL Server</p> -->
+        </div>
+
+        <div class="project-card">
+            <h3>Airline Reservation System</h3>     
+        <p>Having experience experience working in Airline management domain phases as a <b> Software Engineer</b>.</p>
+        <p>Developed web-based business applications using ASP.NET MVC, C#, SQL Server, and Crystal Reports.</p>
+        <p>Participated in end-to-end SDLC activities including requirement gathering, development, testing, deployment, and support.</p>
+        <p>Conducted code reviews and implemented coding best practices to improve code quality.</p>
+        <p>Enhanced application performance through debugging, refactoring, and query optimisation.</p>
+        <p>Implemented security and data protection measures to ensure application compliance and reliability.</p>
+
+            <!-- <p>ASP.NET MVC, C#, SQL Server</p> -->
+        </div>
+
+        <div class="project-card">
+            <h3>Banking Application</h3>
+            <p>Having experience in the Banking domain as a <b>Associate Software Engineer</b>.</p>
+		    <p>Developed and maintained applications using .NET Framework, ASP.NET, C#, Oracle, and SQL Server.</p>
+            <p>Designed database objects including stored procedures, functions, and complex SQL queries.</p>
+            <p>Worked closely with senior developers to implement new features and resolve technical issues.</p>
+            <p>Applied OOP principles and coding standards to develop maintainable and scalable solutions.</p>
+            <!-- <p>.NET Framework, Oracle, SQL Server</p> -->
+        </div>
+
+    </div>
+
+</section>
+
+<section id="certifications">
+
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="certifications">
+
+        <div class="list-item">
+            PG-DAC (Post Graduate Diploma in Advanced Computing)
+        </div>
+
+        <div class="list-item">
+            Microsoft Certified: Azure Fundamentals (GH-900 - GitHub Foundations - English (ENU))
+        </div>
+
+    </div>
+
+</section>
+
+<section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="education">
+
+        <div class="list-item">
+            Bachelor of Engineering (Information Technology)
+        </div>
+
+        <div class="list-item">
+            Diploma in Computer Engineering
+        </div>
+        <div class="list-item">
+            10th Standard (SSC)
+        </div>
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2 class="section-title">Contact <span>Me</span></h2>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+            <h3>Email</h3>
+            <p>sushmita.borade12@gmail.com</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Location</h3>
+            <p>Pune, Maharashtra, India</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Phone</h3>
+            <p>+91 9373377188</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Sushmita Borade | .NET Full Stack Developer</p>
+</footer>
+
+</div>
+
+</body>
+</html>
